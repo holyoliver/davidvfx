@@ -16,11 +16,15 @@ header{
   border-color: #F0FFFF;
   border-style: solid;
 }
+.video iframe{
+  opacity:
+}
 .name{
   display: flex;
   padding-left: 40px;
   flex-grow: 0.1;
   align-items: center;
+  color: #FFF8DC;
 }
 .name span{
   font-size: 1.6em;
@@ -28,17 +32,39 @@ header{
   letter-spacing: 2px;
 }
 .menu{
+  z-index: 1;
   display: flex;
+}
+.menu a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
 }
 .menu span{
   font-size: 1.1em;
   display: inline-block;
-  padding: 10px;
+  padding: 15px;
   letter-spacing: 2px;
 }
+.menu a::after{
+  content: "";
+  background: white;
+	mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
 .menu a:link{
   text-decoration: none;
   color: #F0FFFF;
+}
+.menu a:hover::after{
+  height: calc(100% + 8px)
 }
 .menu a:visited{
   color: #F0FFFF;
@@ -57,4 +83,46 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+#portfolio{
+  background: #000000;
+  width: 100%;
+  display: flex;
+  height: auto;
+  text-align: center;
+  flex-direction: column;
+}
+#portfolio h1{
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 3em;
+  color: #F0FFFF;
+}
+.portcont{
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.port{
+  padding: 10px 10px 10px 10px;
+
+}
+.port h2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #F0FFFF;
+}
+.port img{
+  border-radius: 5%;
+  opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.port img:hover{
+    opacity: 1.0;
+    filter: alpha(opacity=100);
 }
