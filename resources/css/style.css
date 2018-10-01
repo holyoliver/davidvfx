@@ -147,6 +147,8 @@ header{
   color: #F0FFFF;
 }
 .port img{
+  width: 100%;
+  height: auto;
   border-radius: 5%;
   opacity: 0.5;
     filter: alpha(opacity=50);
@@ -162,23 +164,29 @@ header{
   height: auto;
 }
 .aboutcont{
-  width: 70%;
+  width: 100%
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 .aboutcont h1{
+  width: 100%;
   padding-top: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
   align-items: center;
   color: #F0FFFF;
   font-size: 3em;
+  text-align: center;
 }
 .aboutcont p{
+  width: 70%;
   font-size: 1.5em;
   text-align: center;
   line-height: 2em;
   color: #F0FFFF;
   letter-spacing: 2px;
+  margin: 0 auto;
+}
+.aboutcont h1{
 }
